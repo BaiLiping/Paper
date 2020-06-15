@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.15)  15 JUN 2020 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.15)  15 JUN 2020 23:59
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **WPT.tex
 (./WPT.tex
@@ -1374,7 +1373,7 @@ ing,MARL,
 <beamformer.png, id=4, 868.24374pt x 438.63875pt>
 File: beamformer.png Graphic file (type png)
 <use beamformer.png>
-Package pdftex.def Info: beamformer.png  used on input line 143.
+Package pdftex.def Info: beamformer.png  used on input line 138.
 (pdftex.def)             Requested size: 154.80157pt x 78.20193pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1383,69 +1382,106 @@ Package pdftex.def Info: beamformer.png  used on input line 143.
 <channel.png, id=16, 900.36375pt x 364.36125pt>
 File: channel.png Graphic file (type png)
 <use channel.png>
-Package pdftex.def Info: channel.png  used on input line 157.
-(pdftex.def)             Requested size: 154.80157pt x 62.64111pt.
+Package pdftex.def Info: channel.png  used on input line 152.
+(pdftex.def)             Requested size: 103.19843pt x 41.75888pt.
 <6.png, id=17, 428.60126pt x 230.8625pt>
 File: 6.png Graphic file (type png)
 <use 6.png>
-Package pdftex.def Info: 6.png  used on input line 176.
+Package pdftex.def Info: 6.png  used on input line 171.
 (pdftex.def)             Requested size: 154.80157pt x 83.38167pt.
 
 [2 <./channel.png> <./6.png>] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 []\T1/ptm/m/n/10 (+20) Let us reg-is-ter a path se-quence taken by the
  []
 
 
-Underfull \hbox (badness 6032) in paragraph at lines 337--338
+Underfull \hbox (badness 6032) in paragraph at lines 332--333
 \T1/ptm/m/n/10 (+20) agent as $\OML/cmm/m/it/10 ^^\$ \T1/ptm/m/n/10 (+20) such 
 that the se-quence is de-noted as
  []
 
 
-Underfull \hbox (badness 6252) in paragraph at lines 337--338
+Underfull \hbox (badness 6252) in paragraph at lines 332--333
 \T1/ptm/m/n/10 (+20) {$\OML/cmm/m/it/10 S[]; A[]; R[]:::S[]; A[]; R[]$\T1/ptm/m
 /n/10 (+20) }. the gain of se-quence
  []
 
+<without.png, id=37, 408.52625pt x 89.33376pt>
+File: without.png Graphic file (type png)
+<use without.png>
+Package pdftex.def Info: without.png  used on input line 375.
+(pdftex.def)             Requested size: 154.80157pt x 33.85039pt.
 
-Overfull \hbox (13.79422pt too wide) in paragraph at lines 393--418
+Underfull \hbox (badness 3884) in paragraph at lines 380--381
+\T1/ptm/m/n/10 (+20) tion space com-plex-ity into state-space com-plex-ity by
+ []
+
+
+Underfull \hbox (badness 3861) in paragraph at lines 380--381
+\T1/ptm/m/n/10 (+20) in-tro-duc-ing in-ter-me-di-ate states, de-noted as $\OML/
+cmm/m/it/10 S[]$ \T1/ptm/m/n/10 (+20) where
+ []
+
+
+Underfull \hbox (badness 4832) in paragraph at lines 380--381
+\T1/ptm/m/n/10 (+20) k goes from 1 to M-1. The se-quence of data is
+ []
+
+<with.png, id=38, 817.0525pt x 157.58875pt>
+File: with.png Graphic file (type png)
+<use with.png>
+Package pdftex.def Info: with.png  used on input line 384.
+(pdftex.def)             Requested size: 283.80157pt x 54.73848pt.
+
+Overfull \hbox (31.80157pt too wide) in paragraph at lines 384--385
+ [][] 
+ []
+
+<environment.png, id=39, 349.305pt x 264.99pt>
+File: environment.png Graphic file (type png)
+<use environment.png>
+Package pdftex.def Info: environment.png  used on input line 403.
+(pdftex.def)             Requested size: 154.80157pt x 117.43698pt.
+
+Underfull \vbox (badness 2662) has occurred while \output is active []
+
+ [4 <./without.png> <./with.png>]
+Overfull \hbox (13.79422pt too wide) in paragraph at lines 411--436
  [] 
  []
 
-(./WPT.bbl [4]) [5
-
-] (./WPT.aux) ) 
+(./WPT.bbl) [5 <./environment.png>] (./WPT.aux) ) 
 Here is how much of TeX's memory you used:
- 19535 strings out of 492982
- 356330 string characters out of 6134896
- 429143 words of memory out of 5000000
- 22528 multiletter control sequences out of 15000+600000
- 127431 words of font info for 247 fonts, out of 8000000 for 9000
+ 19558 strings out of 492982
+ 356654 string characters out of 6134896
+ 427167 words of memory out of 5000000
+ 22544 multiletter control sequences out of 15000+600000
+ 128697 words of font info for 250 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,16n,54p,1015b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on WPT.pdf (5 pages, 1024827 bytes).
+{/usr/share/texlive/texmf-dist
+/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/times/utmri8a.pfb>
+Output written on WPT.pdf (5 pages, 1068024 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 29724 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 30251 words of extra memory for PDF output out of 35830 (max. 10000000)
 

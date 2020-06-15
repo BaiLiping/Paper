@@ -67,7 +67,7 @@
 \bstctlcite{IEEEexample:BSTcontrol}
     \title{test}
 \title{Multiagent Reinforcement Learning based Energy Beamforming Control}
-\author{Zhongqiang Pang, Liping Bai, Alien \thanks{Nanjing Unversity of Posts and Telecommunications, College of Automation and College of Artificial Intelligence, Nanjing, Jiangsu,210000 China email:zqpang@njupt.edu.cn}}
+\author{ Zongqiang Pang,Liping Bai ~\IEEEmembership{Member,~IEEE,} \thanks{Nanjing Unversity of Posts and Telecommunications, College of Automation \& College of Artificial Intelligence, Nanjing, Jiangsu,210000 China email:zqpang@njupt.edu.cn}}
 
 
 % ====================================================================
@@ -89,11 +89,6 @@ that wireless energy is directionally concentrated around the ultra low power de
 \begin{IEEEkeywords}
 Multiagent Reinforcement Learning,MARL, Wireless Power Transfer, Beamforming
 \end{IEEEkeywords}
-
-
-
-
-
 
 % For peer review papers, you can put extra information on the cover
 % page as needed:
@@ -146,7 +141,7 @@ The theories of phased array were fully formulated during the WWII era where an 
 \end{figure}
 \subsection{Channel Model}
 
-Suppose there are p propogation path from transmitter to receiver. the gain for each path is denoted by $\alpha_i$. The channel is modeled as a sum of each path. When Line of Sight(LoS) not available and the number of path is large, Rayleigh fading is used to model Non Line of Sight channel gain. In this paper, we only consider the environment with direct Line of Sight transmission and no reflection path.
+Suppose there are p propogation path from transmitter to receiver. the gain for each path is denoted by $\alpha_i$. The channel is modeled as a sum of each path. When Line of Sight(LoS) not available and the number of path is large, Rayleigh fading and a pleathera of channel modelling techniques can be applied to capture Non Line of Sight channel gain. In this paper, we only consider the environment with direct Line of Sight transmission and no reflection path.
 
 \begin{equation}
 h=\sum_{i=1}^p \alpha_i e^{-j2\pi \frac{d_i}{\lambda}}
@@ -154,7 +149,7 @@ h=\sum_{i=1}^p \alpha_i e^{-j2\pi \frac{d_i}{\lambda}}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\textwidth]{channel.png}
+\includegraphics[width=0.2\textwidth]{channel.png}
 \caption{Multipath Channel Model}
 \label{fig:channel}
 \end{figure}
@@ -373,11 +368,25 @@ $A_t=\{A_t^1,A_t^2,...,A_t^M\}$ M is the number of agents. The action space is c
 The Rollout method proposed by Dimitri Bertsekas breakdown this collective decision into its sequential components, reducing the complexity of action space while increasing the complexity of state space. It is proven that the intermediate state rollout method yields the same result as does the regular method. \cite{Bertsekas2019MultiagentRA}
 
 Without intermidiate state rollout, the sequences of data collected is:
-...$S_t, A_t, R_t, S_{t+1}$...
+...$S_t, A_t, R_t, S_{t+1}$... as shown in Figure \ref{fig:without}
 
-The intermediate states rollout technique converting action space complexity into state-space complexity by introducing intermediate states, denoted as $S_t^k$ where k goes from 1 to M-1. The sequence of data is now:
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{without.png}
+\caption{Without Rollout}
+\label{fig:without}
+\end{figure}
 
-...$S_t,A_t^1,R_t^1,S_t^1,A_t^2,R_t^2, S_t^2, ... , S_t^{M-1},A_t^M,R_t^M,S_{t+1}$...
+The intermediate states rollout technique converting action space complexity into state-space complexity by introducing intermediate states, denoted as $S_t^k$ where k goes from 1 to M-1. The sequence of data is now: ...$S_t,A_t^1,R_t^1,S_t^1,A_t^2,R_t^2, S_t^2, ... , S_t^{M-1},A_t^M,R_t^M,S_{t+1}$... as shown in Figure \ref{fig:with}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.55\textwidth]{with.png}
+\caption{With Rollout}
+\label{fig:with}
+\end{figure}
+
+
 
 where $S_t^k=(S_t^{k-1},A_t^k)$
 
@@ -386,7 +395,16 @@ suppose each agent has N choices. This formulation reduces the size action space
 
 \section{Beamforming as a Multiagent Reinforcement Learning problem}
 \subsection{Environment}
-The wirelessly powered communication network has L energy transmitting stations positioned at the corner of a 30m x 30m field. K energy receivers randomly scattered between 1m to 29m. 0.5s of energy transfer is followed with 0.5s of information transfer. Assume no energy leftover at each cycle, such that at the beginning of the next energy transfer interval, the remaining power at each energy receiver is 0.
+The wirelessly powered communication network has L energy transmitting stations positioned at the corner of a 30m x 30m field. K energy receivers randomly scattered between 1m to 29m as illustrated by Figure \ref{fig:environment}. 0.5s of energy transfer is followed with 0.5s of information transfer. Assume no energy leftover at each cycle, such that at the beginning of the next energy transfer interval, the remaining power at each energy receiver is 0.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.3\textwidth]{environment.png}
+\caption{Environment}
+\label{fig:environment}
+\end{figure}
+
 
 \begin{small}
 \begin{center}
