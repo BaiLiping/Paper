@@ -1,32 +1,8 @@
-%
-% IEEE Transactions on Microwave Theory and Techniques example
-% Tibault Reveyrand - http://www.microwave.fr
-%
-% http://www.microwave.fr/LaTeX.html
-% ---------------------------------------
-
-
-
-% ================================================
-% Please HIGHLIGHT the new inputs such like this :
-% Text :
-%  \hl{comment}
-% Aligned Eq.
-% \begin{shaded}
-% \end{shaded}
-% ================================================
-
-
-
 \documentclass[journal]{IEEEtran}
-
-
-
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{tabularx}
 \usepackage[utf8]{inputenc} % allow utf-8 input
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-%\usepackage{hyperref}       % hyperlinks
 \usepackage{url}            % simple URL typesetting
 \usepackage{booktabs}       % professional-quality tables
 \usepackage{amsfonts}       % blackboard math symbols
@@ -35,7 +11,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \restylefloat{table}
-%\usepackage[toc,page]{appendix}
+\usepackage{hyperref}
 \usepackage{multicol}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -60,7 +36,7 @@
 %\usepackage{biblatex}
 %\bibliographystyle{plain}
 
-
+\usepackage[font=small]{caption}
 
 %=== TITLE & AUTHORS ====================================================================
 \begin{document}
@@ -68,32 +44,23 @@
     \title{test}
 \title{Multiagent Reinforcement Learning based Energy Beamforming Control}
 \author{ Zongqiang Pang,Liping Bai ~\IEEEmembership{Member,~IEEE,} \thanks{Nanjing Unversity of Posts and Telecommunications, College of Automation \& College of Artificial Intelligence, Nanjing, Jiangsu,210000 China email:zqpang@njupt.edu.cn}}
-
-
 % ====================================================================
 \maketitle
-
-
-
 % === ABSTRACT ====================================================================
 % =================================================================================
 \begin{abstract}
-%\boldmath
 Ultra low power devices make far-field wireless power transfer a viable option for energy delivery despite the exponential attenuation. Electromagnetic beams are constructed from the stations such
 that wireless energy is directionally concentrated around the ultra low power devices. Energy beamforming faces different challenges compare to information beamforming due to the lack of feedback on channel state. Various methods have been proposed such as one-bit channel feedback to enhance energy beamforming capacity, yet it still has considerable computation overhead and need to be computed centrally. Valuable resources and time is wasted on transfering control information back and forth. In this paper, we propose a novel multiagent reinforcement learning(MARL) formulation for codebook based beamforming control. It takes advantage of the inherienntly distributed structure in a wirelessly powered network and lay the ground work for fully locally computed beam control algorithms. Source code can be found at \url{https://github.com/BaiLiping/WirelessPowerTransfer}.
 \end{abstract}
-
-
 % === KEYWORDS ====================================================================
 % =================================================================================
 \begin{IEEEkeywords}
 Multiagent Reinforcement Learning,MARL, Wireless Power Transfer, Beamforming
 \end{IEEEkeywords}
-
 % For peer review papers, you can put extra information on the cover
 % page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+ %\ifCLASSOPTIONpeerreview
+ %\begin{center} \bfseries EDICS Category: 3-BBND \end{center}
 % \fi
 %
 % For peerreview papers, this IEEEtran command inserts a page break and
@@ -101,21 +68,7 @@ Multiagent Reinforcement Learning,MARL, Wireless Power Transfer, Beamforming
 \IEEEpeerreviewmaketitle
 
 
-% ====================================================================
-% ====================================================================
-% ====================================================================
-
-
-
-
-
-
-
-
-
-
-
-% === I. INTRODUCTION =============================================================
+% === I. Paper =============================================================
 % =================================================================================
 \section{Introduction}
 \IEEEPARstart{W}{ireless} power transfer(WPT) can be divided into near-field WPT with inductive coupling, magnetic resonant coupling or capacitive coupling {8357386} and far-field WPT with electromagnetic power beams. \cite{8246215} Compare to near-field WPT, the far-field option has considerable attenuation,  yet the increased application of ultra low power devices such as RFID, low power sensor networks \cite{7578025}, together with various forms of joint wireless information and power transfer technology such as Simultaneous Wireless Information and Power Transfer (SWIPT) \cite{8214104}, Wirelessly Powered Communication Networks (WPCNs) \cite{7462480}, Wirelessly Powered Backscatter Communication (WPBC) \cite{7842391} has made far-field WPT an important tool for powering those devices. Current far-field WPT technology can effectively transfer tens of microwatts of RF power to wireless devices from a distance of more than 10 meters. \cite{7462480}
@@ -143,16 +96,18 @@ The theories of phased array were fully formulated during the WWII era where an 
 
 Suppose there are p propogation path from transmitter to receiver. the gain for each path is denoted by $\alpha_i$. The channel is modeled as a sum of each path. When Line of Sight(LoS) not available and the number of path is large, Rayleigh fading and a pleathera of channel modelling techniques can be applied to capture Non Line of Sight channel gain. In this paper, we only consider the environment with direct Line of Sight transmission and no reflection path.
 
+\begin{multicols}{2}
 \begin{equation}
 h=\sum_{i=1}^p \alpha_i e^{-j2\pi \frac{d_i}{\lambda}}
 \end{equation}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.2\textwidth]{channel.png}
+\includegraphics[width=0.25\textwidth]{channel.png}
 \caption{Multipath Channel Model}
 \label{fig:channel}
 \end{figure}
+\end{multicols}
 
 
 \subsection{beamforming codebook $\mathcal{F}$}
@@ -385,11 +340,6 @@ The intermediate states rollout technique converting action space complexity int
 \caption{With Rollout}
 \label{fig:with}
 \end{figure}
-
-
-
-where $S_t^k=(S_t^{k-1},A_t^k)$
-
 suppose each agent has N choices. This formulation reduces the size action space from $N^M$ to $N \times M$.
 
 
